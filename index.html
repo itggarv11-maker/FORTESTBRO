@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StuBro AI | The Ultimate Neural Study Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX for math rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/mhchem.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="window.dispatchEvent(new Event('katexready'))"></script>
+
+    <style>
+      :root {
+        --primary: #8b5cf6;
+        --secondary: #ec4899;
+        --bg-deep: #020617;
+      }
+      body {
+        font-family: 'Outfit', sans-serif;
+        background-color: var(--bg-deep);
+        color: #f8fafc;
+        margin: 0;
+        padding: 0;
+      }
+      .font-mono-tech { font-family: 'Space Grotesk', monospace; }
+
+      .glass-card {
+        background: rgba(15, 23, 42, 0.4);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      }
+      
+      .hero-text-glow {
+        text-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+      }
+
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-track { background: #020617; }
+      ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+      
+      .pulsing-loader div { width: 6px; height: 6px; background: currentColor; border-radius: 50%; animation: pulse 1s infinite alternate; }
+      @keyframes pulse { from { opacity: 0.3; transform: scale(0.8); } to { opacity: 1; transform: scale(1.1); } }
+    </style>
+
+    <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.11.0",
+    "react": "https://esm.sh/react@^19.0.0",
+    "react-dom": "https://esm.sh/react-dom@^19.0.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.1.1",
+    "html2canvas": "https://esm.sh/html2canvas@^1.4.1",
+    "reactflow": "https://esm.sh/reactflow@^11.11.4",
+    "jspdf": "https://esm.sh/jspdf@^3.0.1",
+    "firebase/app": "https://esm.sh/firebase@10.12.3/app",
+    "firebase/auth": "https://esm.sh/firebase@10.12.3/auth",
+    "firebase/firestore": "https://esm.sh/firebase@10.12.3/firestore",
+    "framer-motion": "https://esm.sh/framer-motion@11.0.8",
+    "three": "https://esm.sh/three@0.160.0",
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@8.15.11?external=three",
+    "@react-three/drei": "https://esm.sh/@react-three/drei@9.92.7?external=three",
+    "react-markdown": "https://esm.sh/react-markdown@^9.0.1",
+    "remark-gfm": "https://esm.sh/remark-gfm@^4.0.0",
+    "pdfjs-dist": "https://esm.sh/pdfjs-dist@4.5.136",
+    "mammoth": "https://esm.sh/mammoth@^1.11.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+  </head>
+  <body class="bg-slate-950 text-slate-50 antialiased selection:bg-violet-500/50">
+    <div id="root"></div>
+    <script>
+      if (typeof process === 'undefined') { window.process = { env: {} }; }
+    </script>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
